@@ -1,0 +1,61 @@
+# SDGScript Configuration File
+
+# SDGs Goals to focus on in analysis
+goals:
+  - Goal7_AffordableEnergy
+  - Goal13_ClimateAction
+  - Goal4_QualityEducation
+  - Goal5_GenderEquality
+  - Goal12_ResponsibleConsumption
+
+# Energy and resource budget limits
+budgets:
+  defaultCarbonBudget: 1.0  # kWh - default energy budget per function
+  maxNetworkCalls: 5        # Maximum API calls per function
+  maxComputeComplexity: 1000 # Maximum algorithmic complexity
+
+# Static analysis configuration
+analysis:
+  strictMode: false          # Enable strict SDGs compliance checking
+  enableRuntimeTracking: true # Enable real-time resource monitoring
+  outputFormat: "json"       # Report format: json, html, markdown
+  reportPath: "./sdg-report" # Output directory for reports
+
+# ESLint rule configurations
+rules:
+  requireSDGAnnotation:
+    enabled: true
+    energyThreshold: 1.0      # kWh threshold requiring annotation
+    networkCallThreshold: 3   # Network call threshold requiring annotation
+  
+  avoidIneffficientLoops:
+    enabled: true
+    maxNestingLevel: 2        # Maximum allowed loop nesting
+  
+  limitNetworkCalls:
+    enabled: true
+    maxCallsPerFunction: 5    # Maximum network calls per function
+
+# File inclusion and exclusion patterns
+files:
+  include:
+    - "src/**/*.ts"           # Include TypeScript source files
+    - "src/**/*.tsx"          # Include React TypeScript files
+  exclude:
+    - "**/*.test.ts"          # Exclude test files
+    - "**/*.spec.ts"          # Exclude specification files
+    - "**/node_modules/**"    # Exclude dependencies
+
+# Third-party tool integrations
+integrations:
+  eslint: true               # Enable ESLint plugin integration
+  prettier: true             # Enable Prettier formatting
+  vscode: true               # Enable VSCode extension features
+  githubActions: true        # Enable GitHub Actions workflow
+
+# Custom impact calculation weights
+impactWeights:
+  energy: 1.0               # Weight for energy consumption impact
+  emissions: 0.8            # Weight for carbon emissions impact
+  social: 0.6               # Weight for social responsibility impact
+  accessibility: 0.7        # Weight for accessibility compliance

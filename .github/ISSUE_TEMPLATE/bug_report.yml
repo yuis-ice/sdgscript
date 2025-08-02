@@ -1,0 +1,177 @@
+name: 🐛 Bug Report
+description: Report a bug or issue with SDGScript
+title: "[Bug]: "
+labels: ["bug", "needs-triage"]
+assignees:
+  - yuis-ice
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report! 
+        
+        🌍 **Help us make SDGScript better** - Your report contributes to more sustainable and reliable software development tools.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: A clear and concise description of what the bug is.
+      placeholder: Tell us what you see!
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: What should have happened instead?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction-steps
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce the issue
+      placeholder: |
+        1. Go to '...'
+        2. Run command '...'
+        3. Add SDG annotation '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: code-sample
+    attributes:
+      label: Code Sample
+      description: If applicable, add a minimal code sample that reproduces the issue
+      render: typescript
+      placeholder: |
+        /**
+         * @sdg Goal13 ClimateAction
+         * @carbonBudget 1.0kWh
+         */
+        function problematicFunction() {
+          // Your code here
+        }
+
+  - type: dropdown
+    id: package
+    attributes:
+      label: Affected Package
+      description: Which SDGScript package is affected?
+      options:
+        - "@sdgscript/core"
+        - "@sdgscript/cli"
+        - "@sdgscript/runtime"
+        - "@sdgscript/eslint-plugin"
+        - "@sdgscript/vscode-extension"
+        - "Main sdgscript package"
+        - "Documentation"
+        - "Other"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: sdg-goal
+    attributes:
+      label: Related SDG Goal (if applicable)
+      description: Is this issue related to a specific SDG goal?
+      options:
+        - "Not SDG specific"
+        - "Goal 1: No Poverty"
+        - "Goal 4: Quality Education"
+        - "Goal 5: Gender Equality"
+        - "Goal 7: Affordable Clean Energy"
+        - "Goal 12: Responsible Consumption"
+        - "Goal 13: Climate Action"
+        - "Other SDG Goal"
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment Information
+      description: Please provide your environment details
+      value: |
+        - OS: 
+        - Node.js version: 
+        - npm/yarn version: 
+        - SDGScript version: 
+        - TypeScript version: 
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-output
+    attributes:
+      label: Error Output
+      description: If applicable, paste any error messages or logs
+      render: shell
+      placeholder: Paste error output here...
+
+  - type: textarea
+    id: config-files
+    attributes:
+      label: Configuration Files
+      description: Share relevant configuration files (tsconfig.json, sdgscript.config.yaml, etc.)
+      render: json
+      placeholder: |
+        // tsconfig.json
+        {
+          "compilerOptions": {
+            // your config
+          }
+        }
+
+  - type: checkboxes
+    id: impact-assessment
+    attributes:
+      label: Impact Assessment
+      description: Help us understand the impact of this bug
+      options:
+        - label: This affects SDGs compliance analysis
+        - label: This affects energy consumption calculations
+        - label: This affects runtime monitoring
+        - label: This affects development workflow
+        - label: This affects accessibility or inclusion features
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: |
+        Add any other context about the problem here.
+        
+        Consider including:
+        - Screenshots or videos
+        - Related issues or discussions
+        - Potential workarounds you've tried
+        - Impact on your sustainability goals
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How critical is this issue for your work?
+      options:
+        - "Low - Minor inconvenience"
+        - "Medium - Affects functionality but has workarounds"
+        - "High - Blocks development or SDGs compliance"
+        - "Critical - Security or data integrity issue"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our Code of Conduct and contribute to sustainable software development
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+        - label: I have searched for similar issues before submitting
+          required: true

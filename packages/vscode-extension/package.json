@@ -1,0 +1,80 @@
+{
+  "name": "sdgscript-vscode",
+  "displayName": "SDGScript",
+  "description": "SDGScript language support for Visual Studio Code",
+  "version": "0.1.0",
+  "publisher": "sdgscript",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": ["Programming Languages", "Linters", "Other"],
+  "keywords": ["typescript", "sdgs", "sustainability", "climate", "linter"],
+  "activationEvents": [
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "sdgscript",
+        "aliases": ["SDGScript", "sdgscript"],
+        "extensions": [".ts", ".tsx"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sdgscript",
+        "scopeName": "source.sdgscript",
+        "path": "./syntaxes/sdgscript.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "sdgscript.analyze",
+        "title": "Analyze SDGs Compliance",
+        "category": "SDGScript"
+      },
+      {
+        "command": "sdgscript.generateReport",
+        "title": "Generate SDG Report", 
+        "category": "SDGScript"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "SDGScript",
+      "properties": {
+        "sdgscript.enableLinting": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable SDGScript linting"
+        },
+        "sdgscript.carbonBudgetDefault": {
+          "type": "number",
+          "default": 1.0,
+          "description": "Default carbon budget in kWh"
+        },
+        "sdgscript.strictMode": {
+          "type": "boolean", 
+          "default": false,
+          "description": "Enable strict SDG compliance checking"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.x",
+    "@types/vscode": "^1.74.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@sdgscript/core": "^0.1.0"
+  }
+}

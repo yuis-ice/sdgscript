@@ -1,0 +1,25 @@
+{
+  "name": "@sdgscript/eslint-plugin",
+  "version": "0.1.0",
+  "description": "ESLint plugin for SDGScript rules",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@sdgscript/core": "^0.1.0",
+    "@typescript-eslint/utils": "^6.17.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
+    "eslint": "^8.56.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0",
+    "@typescript-eslint/parser": ">=6.0.0"
+  }
+}

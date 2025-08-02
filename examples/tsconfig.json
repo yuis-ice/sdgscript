@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "commonjs",
+    "lib": ["ES2022", "DOM"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": [
+    "src/**/*",
+    "examples/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.test.ts"
+  ],
+  "sdgscript": {
+    "enableSDGChecks": true,
+    "carbonBudgetDefault": 1.0,
+    "strictMode": false,
+    "outputFormat": "json",
+    "goals": [
+      "Goal7_AffordableEnergy",
+      "Goal13_ClimateAction",
+      "Goal4_QualityEducation",
+      "Goal5_GenderEquality"
+    ]
+  }
+}

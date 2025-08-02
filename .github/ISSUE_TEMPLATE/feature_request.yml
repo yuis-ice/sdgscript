@@ -1,0 +1,232 @@
+name: 💡 Feature Request
+description: Suggest a new feature or enhancement for SDGScript
+title: "[Feature]: "
+labels: ["enhancement", "needs-triage"]
+assignees:
+  - yuis-ice
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! 
+        
+        🌍 **Help us build sustainable software** - Your ideas help make programming more environmentally and socially responsible.
+
+  - type: textarea
+    id: feature-summary
+    attributes:
+      label: Feature Summary
+      description: A clear and concise summary of the feature you'd like to see
+      placeholder: Brief description of the proposed feature
+    validations:
+      required: true
+
+  - type: dropdown
+    id: sdg-alignment
+    attributes:
+      label: SDG Alignment
+      description: Which Sustainable Development Goal(s) does this feature support?
+      multiple: true
+      options:
+        - "Goal 1: No Poverty"
+        - "Goal 2: Zero Hunger"
+        - "Goal 3: Good Health and Well-being"
+        - "Goal 4: Quality Education"
+        - "Goal 5: Gender Equality"
+        - "Goal 6: Clean Water and Sanitation"
+        - "Goal 7: Affordable and Clean Energy"
+        - "Goal 8: Decent Work and Economic Growth"
+        - "Goal 9: Industry, Innovation and Infrastructure"
+        - "Goal 10: Reduced Inequalities"
+        - "Goal 11: Sustainable Cities and Communities"
+        - "Goal 12: Responsible Consumption and Production"
+        - "Goal 13: Climate Action"
+        - "Goal 14: Life Below Water"
+        - "Goal 15: Life on Land"
+        - "Goal 16: Peace, Justice and Strong Institutions"
+        - "Goal 17: Partnerships for the Goals"
+        - "General sustainability improvement"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What pain point are you experiencing?
+      placeholder: |
+        Describe the current limitation or problem that this feature would address.
+        
+        Consider:
+        - What workflow is inefficient?
+        - What sustainability aspect is missing?
+        - What makes current development less environmentally/socially responsible?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe how you envision this feature working
+      placeholder: |
+        Detailed description of your proposed solution.
+        
+        Consider including:
+        - How the feature would work
+        - User interface or API design
+        - Integration with existing SDGScript features
+        - Examples of usage
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      description: Provide specific examples of how this feature would be used
+      placeholder: |
+        Example 1: 
+        As a developer working on climate data analysis, I want to...
+        
+        Example 2:
+        As a team lead implementing green software practices, I need to...
+        
+        Example 3:
+        As an educator teaching sustainable programming, I would like to...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of feature is this?
+      options:
+        - "New SDG annotation or analysis"
+        - "CLI command or tool enhancement"
+        - "Runtime monitoring capability"
+        - "ESLint rule or developer tool"
+        - "VSCode extension feature"
+        - "Documentation or educational content"
+        - "Performance optimization"
+        - "Accessibility improvement"
+        - "Integration with external tools"
+        - "Other"
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact-measurement
+    attributes:
+      label: Expected Impact
+      description: How would you measure the success and impact of this feature?
+      placeholder: |
+        Consider:
+        - Environmental benefits (energy savings, carbon reduction)
+        - Social impact (accessibility, education, inclusion)
+        - Developer experience improvements
+        - Adoption metrics
+        - Quantifiable outcomes
+
+  - type: textarea
+    id: implementation-ideas
+    attributes:
+      label: Implementation Ideas
+      description: Any thoughts on how this could be implemented? (Optional but helpful)
+      placeholder: |
+        If you have ideas about:
+        - Technical approach
+        - Required dependencies
+        - Integration points
+        - Potential challenges
+        - Phased implementation strategy
+
+  - type: textarea
+    id: code-examples
+    attributes:
+      label: Code Examples
+      description: Show how you envision using this feature (Optional)
+      render: typescript
+      placeholder: |
+        /**
+         * @sdg Goal13 ClimateAction
+         * @newFeature exampleUsage
+         */
+        function exampleFunction() {
+          // Show how the new feature would be used
+        }
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What alternative solutions have you considered?
+      placeholder: |
+        - Alternative approach 1: ...
+        - Alternative approach 2: ...
+        - Why the proposed solution is preferred
+        - Existing tools or workarounds you've tried
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority Level
+      description: How important is this feature for sustainable development goals?
+      options:
+        - "Low - Nice to have enhancement"
+        - "Medium - Would improve sustainability practices"
+        - "High - Critical for achieving SDGs compliance"
+        - "Critical - Addresses urgent sustainability need"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: feature-scope
+    attributes:
+      label: Feature Scope
+      description: Check all that apply to help us understand the scope
+      options:
+        - label: This would be a breaking change
+        - label: This requires new dependencies
+        - label: This affects multiple SDGScript packages
+        - label: This needs documentation updates
+        - label: This could benefit from community input
+        - label: This aligns with existing roadmap items
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: |
+        Any other context, screenshots, or references that would help understand this feature request.
+        
+        Consider including:
+        - Links to related research or standards
+        - Screenshots or mockups
+        - References to other tools with similar features
+        - Community discussions or feedback
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution Interest
+      description: Would you be interested in contributing to this feature?
+      options:
+        - label: I would like to help implement this feature
+        - label: I can provide testing and feedback
+        - label: I can help with documentation
+        - label: I can provide domain expertise (SDGs knowledge)
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Agreement
+      description: By submitting this feature request, you agree to our contribution guidelines
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+        - label: I have searched for similar feature requests
+          required: true
+        - label: This feature aligns with SDGScript's mission of sustainable development
+          required: true

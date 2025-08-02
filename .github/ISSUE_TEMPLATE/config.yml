@@ -1,0 +1,17 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🗣️ GitHub Discussions
+    url: https://github.com/yuis-ice/sdgscript/discussions
+    about: For questions, ideas, and community discussions about sustainable programming
+  - name: 📚 Documentation
+    url: https://github.com/yuis-ice/sdgscript/blob/main/docs/getting-started.md
+    about: Check our comprehensive documentation and guides
+  - name: 🌍 SDGs Information
+    url: https://sdgs.un.org/
+    about: Learn more about the UN Sustainable Development Goals
+  - name: 💬 Community Chat
+    url: https://github.com/yuis-ice/sdgscript/discussions/categories/q-a
+    about: Quick questions and community support
+  - name: 🔒 Security Issues
+    url: mailto:jobs.fumiya@pm.me
+    about: Report security vulnerabilities privately via email

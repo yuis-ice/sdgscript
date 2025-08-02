@@ -1,0 +1,17 @@
+{
+  "extends": ["@typescript-eslint/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@sdgscript/eslint-plugin"],
+  "rules": {
+    "@sdgscript/require-sdg-annotation": "warn",
+    "@sdgscript/avoid-inefficient-loops": "warn",
+    "@sdgscript/limit-network-calls": "error"
+  },
+  "settings": {
+    "sdgscript": {
+      "carbonBudgetDefault": 1.0,
+      "strictMode": false,
+      "excludePatterns": ["**/*.test.ts", "**/node_modules/**"]
+    }
+  }
+}
